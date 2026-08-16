@@ -1,60 +1,35 @@
-const fotos = [
+// ===============================
+// CORAZONES FLOTANDO
+// ===============================
 
-    "Fotos/Lima/2026-07-23_V1.jpeg",
+function crearCorazon() {
 
-    "Fotos/Lima/2026-07-30_V1.jpeg"
+    const corazon = document.createElement("div");
 
-];
+    corazon.classList.add("corazon");
+
+    corazon.innerHTML = "♥";
+
+    corazon.style.left =
+        Math.random() * 100 + "vw";
+
+    corazon.style.fontSize =
+        (10 + Math.random() * 12) + "px";
+
+    corazon.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(corazon);
 
 
-let indice = 0;
+    setTimeout(() => {
 
+        corazon.remove();
 
-function mostrarFoto() {
-
-    const imagen = document.getElementById("fotoViaje");
-
-    const contador = document.getElementById("contador");
-
-
-    imagen.src = fotos[indice];
-
-
-    contador.textContent =
-        `${indice + 1} / ${fotos.length}`;
-
+    }, 10000);
 }
 
 
-function fotoSiguiente() {
+// Crear corazones cada cierto tiempo
 
-    indice++;
-
-
-    if (indice >= fotos.length) {
-
-        indice = 0;
-
-    }
-
-
-    mostrarFoto();
-
-}
-
-
-function fotoAnterior() {
-
-    indice--;
-
-
-    if (indice < 0) {
-
-        indice = fotos.length - 1;
-
-    }
-
-
-    mostrarFoto();
-
-}
+setInterval(crearCorazon, 1800);
