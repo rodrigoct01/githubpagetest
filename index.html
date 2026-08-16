@@ -1,1 +1,90 @@
-<hi>Github pages test</hi>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuestro Viaje</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>Nuestro Viaje</h1>
+
+        <p>
+            Un Perú para recorrer juntos
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <h2>🇵🇪 Nuestro Perú</h2>
+
+        <p>
+            Cada lugar que conozcamos tendrá una historia.
+        </p>
+
+
+        <!-- LIMA -->
+
+        <section class="departamento">
+
+            <h2>Lima</h2>
+
+            <p>
+                Nuestros recuerdos de Lima
+            </p>
+
+
+            <div class="galeria">
+
+
+                <button onclick="fotoAnterior()">
+                    ❮
+                </button>
+
+
+                <img
+                    id="fotoViaje"
+                    src="Fotos/Lima/2026-07-23_V1.jpeg"
+                    alt="Nuestro recuerdo en Lima"
+                >
+
+
+                <button onclick="fotoSiguiente()">
+                    ❯
+                </button>
+
+
+            </div>
+
+
+            <p id="contador">
+                1 / 2
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
